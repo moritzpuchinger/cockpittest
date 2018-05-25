@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+#open_button {
+    @include disable-mouse-outline;
+    div {
+        vertical-align:top;
+        div {
+            width:2em;
+            height:0.166em;
+            margin:0.25em auto;
+            background:white;
+            &:focus {
+                outline:none!important;
+            }
+        }
+    }
+}
+#logo img {
+    margin:5%;
+    width:90%;
+}
+.off-canvas-content {
+    display:flex;
+    .button {
+        height:100%;
+        position:fixed;
+    }
+    .button, .page_main_content {
+        display:inline-block;
+    }
+    .page_main_content {
+        overflow:visible;
+        white-space:initial;
+        vertical-align:top;
+        padding:2% 5%;
+        width:100%;
+        max-width:1000px;
+        margin-left:3.5em;
+        h1 {
+            font-family: 'Ubuntu', sans-serif;
+            text-align:center;
+        }
+        .text {
+            margin-top:4%;
+            text-align:center;
+            font-family:"Roboto Condensed", sans-serif;
+        }
+        .orbit-controls {
+            button {
+                &:hover {
+                    cursor:pointer;
+                }
+                &:active, &:focus, &:hover, & {
+                    transition:background-color .3s ease-in-out;
+                }
+            }
+        }
+        .created {
+            color:$secondary_color;
+            text-align:center;
+            margin-bottom:1.5%;
+        }
+    }
+}
+html,body {
+    height:100%;
+}
+.off-canvas-wrapper, .off-canvas-content {
+    height:100%;
+    overflow:scroll;
+}
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle)>a::after {
+    transition:transform .3s ease-in-out;
+}
+.accordion-menu {
+    a {
+        &:focus {
+            outline:none;
+        }
+    }
+}
+* {
+    &::selection {
+        background:$primary_color;
+        color:$white;
+    }
+}
